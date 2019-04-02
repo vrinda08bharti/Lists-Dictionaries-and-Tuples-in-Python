@@ -1,0 +1,13 @@
+n=int(input("Enter the number of elements you wish to enter in the list"))
+m=int(input("Enter the number of elements you wish to enter in the sublist"))
+Sub_List=[]
+List=[]
+for i in range(0,n):
+    row=[]
+    for j in range(0,m):
+        temp=int(input("Enter number"))
+        row.append(temp)
+    Sub_List.append(row)
+print(Sub_List)
+List.append(max(Sub_List, key=sum))
+print(List)
