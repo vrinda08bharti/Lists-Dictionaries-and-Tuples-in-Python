@@ -1,0 +1,18 @@
+from operator import itemgetter
+n=int(input("Enter the number of ecords you want to enter"))
+Name=[]
+Age=[]
+Height=[]
+for i in range(0,n):
+    temp1=input("Enter name")
+    Name.append(temp1)
+    temp2=int(input("Enter age"))
+    Age.append(temp2)
+    temp3=int(input("Enter height"))
+    Height.append(temp3)
+Records=[]
+for i in range(0,n):
+    Records.append([Name[i],Age[i],Height[i]])
+print(tuple(Records))
+sorted(Records, key = itemgetter(1,2,3))
+print(Records)
