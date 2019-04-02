@@ -1,0 +1,22 @@
+def subset(superlist, sublist):
+    flag=False
+    if(sublist==[]):
+        flag=True
+    elif sublist==superlist:
+        flag=True
+    elif len(sublist)>len(superlist):
+        flag=True
+    else:
+        for i in range(len(superlist)):
+            if(superlist[i]==sublist[0]):
+                v=1
+    while(v<len(sublist) and superlist[i+v]==sublist[v]):
+        v=v+1
+        if v==len(sublist):
+            flag=True
+    return flag
+List=[1,7,6,5,8,2,3]
+sub_l=[5,8]
+sub_l2=[1,3]
+print(subset(List, sub_l))
+print(subset(List, sub_l2))
